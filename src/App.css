@@ -1,0 +1,269 @@
+:root {
+	--clr-orange: #ee6352;
+	--clr-black: #24252a;
+	--clr-gray: #ddd;
+	--input-border: #d3d3d3;
+	--clr-offwhtie: #f8f8ff;
+	--body: #eee;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--clr-gray);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	background-color: var(--clr-black);
+	color: var(--clr-orange);
+	padding: 1em 3em;
+	font-size: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.flip-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clr-orange);
+	color: var(--clr-black);
+	padding: 10px 20px;
+	transition: transform 0.4s ease;
+}
+
+.flip-button:hover {
+	transform: scale(1.2);
+}
+
+.flip-button:hover span {
+	transition: transform 0.8s ease;
+	transform: rotateZ(180deg);
+}
+
+i.fa-file-alt {
+	font-size: 2.5rem;
+	margin-right: 20px;
+}
+
+/* form styling */
+main {
+	display: flex;
+	justify-content: center;
+	padding: 4rem 0px;
+	position: relative;
+}
+
+.flip-container {
+	width: 90%;
+	max-width: 850px;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease;
+	display: flex;
+}
+
+.flipped {
+	transform: rotateY(180deg);
+}
+
+.front {
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.back {
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+.cv-form {
+	padding: 0px 30px 20px;
+	background-color: var(--body);
+	-webkit-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3);
+	color: var(--clr-black);
+	overflow: hidden;
+	margin-bottom: 32px;
+	font-size: clamp(0.7rem, 2vw, 1rem);
+}
+
+.cv-form h2 {
+	text-decoration: underline;
+	margin: 1.4em 0px 0.8em;
+}
+
+.double-field {
+	display: flex;
+	gap: 20px;
+}
+
+.field {
+	flex: 1;
+	margin-bottom: 10px;
+}
+
+.field label {
+	display: block;
+}
+
+.text-input {
+	width: 100%;
+	border-radius: 5px;
+	border: solid 1.5px var(--input-border);
+	outline: none;
+	padding: 8px 10px;
+	margin-top: 5px;
+	font-family: 'Poppins', sans-serif;
+	transition: box-shadow 0.3s;
+}
+
+.text-input:hover,
+.text-input:focus {
+	box-shadow: 0px 0px 5px 2px var(--input-border);
+}
+
+textarea {
+	padding: 5px 10px;
+	border: solid 1.5px var(--input-border);
+	outline: none;
+	border-radius: 5px;
+	font-family: 'Poppins', sans-serif;
+	margin-top: 5px;
+	resize: none;
+	width: 100%;
+	transition: box-shadow 0.3s;
+}
+
+textarea:hover,
+textarea:focus {
+	box-shadow: 0px 0px 5px 2px var(--input-border);
+}
+
+.buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.btn {
+	width: 90%;
+	max-width: 80px;
+	height: 35px;
+	outline: none;
+	border: 1px solid rgba(32, 33, 36, 0.28);
+	border-radius: 5px;
+	font-family: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn:hover {
+	box-shadow: 0 1px 3px rgba(32, 33, 36, 0.28);
+}
+
+.btn:active {
+	transform: scale(0.9);
+}
+
+.add-btn {
+	background-color: var(--clr-orange);
+	color: #f8f8ff;
+}
+
+/* Preview styling */
+.preview {
+	background-color: var(--body);
+	overflow: hidden;
+	min-height: 1000px;
+	word-break: break-all;
+	-webkit-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 32px;
+}
+
+.preview-header {
+	padding: 2em 2.5em;
+	color: var(--clr-orange);
+	background-image: linear-gradient(to right, #24252a, #575555);
+	font-size: clamp(0.7rem, 2.5vw, 1.3rem);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.header-right {
+	font-size: clamp(0.7rem, 2.3vw, 1rem);
+	font-weight: 500;
+}
+
+.preview h3 {
+	color: var(--clr-black);
+	border-bottom: 1px solid rgb(196, 194, 194);
+	margin-bottom: 10px;
+}
+
+.preview-main {
+	padding: 1.5em 2em;
+	font-size: clamp(0.8rem, 2.7vw, 1rem);
+}
+
+.preview-section {
+	margin-bottom: 2rem;
+}
+
+.description {
+	font-style: italic;
+	color: #504e4e;
+}
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.3rem;
+	padding: 0px 1.5em;
+}
+
+.block * {
+	align-self: center;
+}
+
+.time-range {
+	font-weight: 500;
+}
+
+.block-content {
+	width: 45%;
+	max-width: 320px;
+}
+
+.block-content p:nth-child(1) {
+	font-weight: 500;
+}
+
+@media screen and (max-width: 450px) {
+	.double-field {
+		flex-direction: column;
+		gap: 0px;
+	}
+
+	.buttons {
+		justify-content: center;
+	}
+}
